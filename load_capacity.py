@@ -1,3 +1,7 @@
+'''
+トラックの最大積載量を算出する
+'''
+
 import time
 
 def selection_sort(nlist):
