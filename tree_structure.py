@@ -1,3 +1,12 @@
+'''
+木構造
+id k c1 ... ckの情報が付与されたときに
+節点の情報をその番号が小さい順に出力する
+node id, parent , depth, left-child
+左子右兄弟表現(left-child, right-sibling representation)を用いる
+'''
+
+
 import dataclasses
 
 @dataclasses.dataclass
@@ -58,6 +67,3 @@ if __name__ == "__main__":
     rec(r_index,0)
 
     print(Tree_list)
-
-
-        
