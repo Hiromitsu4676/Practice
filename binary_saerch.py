@@ -29,9 +29,9 @@ def get_preindex(unsorted,sorted):
                 rslt.append(j)
     return rslt
 
-def binary_tree_search(nlist,target_num):
+def binary_search(nlist,target_num):
     '''
-    ターゲット数のインデックスを取得する関数（２分木探索）
+    ターゲット数のインデックスを取得する関数（２分探索）
     '''
     sorted_nlist=selection_sort(nlist)
     preindex=get_preindex(nlist,sorted_nlist)
@@ -56,5 +56,5 @@ def binary_tree_search(nlist,target_num):
 if __name__=='__main__':
     num_list=[10,3,5,2,9,4,12]
     target=5
-    ans=binary_tree_search(num_list,target)
+    ans=binary_earch(num_list,target)
     print('{}のインデックスは{}です'.format(target,ans))
