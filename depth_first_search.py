@@ -56,6 +56,7 @@ if __name__=='__main__':
     finish_time=[0]*N
     
     s=0
+    # スタックに最初のノードを入れる
     S.push(s)
     # 探索中ラベルをつける
     color[s]='Gray'
@@ -63,7 +64,7 @@ if __name__=='__main__':
     discover_time[s]=time
 
     while S.is_empty()!=True:
-        # スタックから取り出す
+        # スタックの一番上の要素を該当ノードとして参照する
         u=S.stack[-1]
 
         count=0
@@ -81,11 +82,7 @@ if __name__=='__main__':
             finish_time[temp]=time
             color[temp]='Black'
 
-for i in range(N):
-    print(i+1,discover_time[i],finish_time[i])
 
-
-        
-
-
-
+    # rslt
+    for i in range(N):
+        print(i+1,discover_time[i],finish_time[i])
