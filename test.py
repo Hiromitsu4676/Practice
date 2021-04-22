@@ -15,6 +15,22 @@ class Queue():
     def is_empty(self):
         return len(self.queue)==0
 
+def bfs_check(alist,start,end):
+
+    color=['White']*len(alist)
+
+    Q=Queue()
+    Q.enqueue(start)
+    while Q.is_empty()!=True:
+        u = Q.dequeue()
+        color[u] = 'Black'
+        for n in alist[u]:
+            if color[n]=='White':
+                Q.enqueue(n)
+            if n == end:
+                return True
+    return False
+
 
 if __name__=='__main__':
     
@@ -42,23 +58,16 @@ if __name__=='__main__':
         u,v = map(int,input_data.pop(0).split())
         adjacent_list[u].append(v)
 
-    q_number=input_data.pop(0)
+    q_number=int(input_data.pop(0))
 
-    # for k in range(q_number):
-    #     q_input=list(map(int,input_data.pop(0).split()))
+    for j in range(q_number):
+        start,end=map(int,input_data.pop(0).split())
+        rslt=bfs_check(adjacent_list,start,end)
 
-    
-    color=['white']*N
-    Q=Queue()
+        if rslt==True:
+            print('Yes')
+        else:
+            print('No')
 
-    s=0
-    Q.enqueue(s)
-    
-    while Q.is_empty()!=True:
-        u=Q.dequeue()
-        color[s]='Gray'
-        for k in range(N):
-            if adjacent_list[k]=='White':
 
-    
     
