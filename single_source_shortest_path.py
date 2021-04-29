@@ -40,11 +40,6 @@ def dijkstra(M,s):
     return d
 
 
-
-
-
-
-
 if __name__=='__main__':
 
     input_data=[]
@@ -69,5 +64,3 @@ if __name__=='__main__':
     rslt=dijkstra(M,s)
     for j in range(len(rslt)):
         print(j,rslt[j])
-
-    
